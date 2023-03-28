@@ -1,6 +1,6 @@
 {
-  "name": "generate-vue-cli",
-  "version": "1.0.0",
+  "name": "@dsabre/generate-vue-cli",
+  "version": "0.0.1",
   "description": "A Vue CLI to generate components instantly",
   "main": "dist/generate-vue-cli.js",
   "bin": "dist/generate-vue-cli.js",
@@ -15,7 +15,7 @@
     "build-tools",
     "generate-vue-cli"
   ],
-  "author": "Daniele Sabre (https://dsabre.github.io/resume/)",
+  "author": "Daniele Sabre (https://github.com/dsabre)",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^18.15.10",

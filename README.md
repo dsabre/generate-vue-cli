@@ -22,7 +22,7 @@ npx @dsabre/generate-vue-cli --dir=src/components --name=HelloWorld
 You can specify a custom template of your own (use `[[COMPONENT_NAME]]` token to print the new component name, it will be replaced when the component is created):
 
 ```vue
-// templates/GeneriComponent.vue
+// templates/GenericComponent.vue
 
 <script setup>
 const msg = '[[COMPONENT_NAME]] component';
@@ -36,14 +36,13 @@ const msg = '[[COMPONENT_NAME]] component';
 then run:
 
 ```bash
-npx @dsabre/generate-vue-cli --dir=src/components --name=HelloWorld --template=templates/GeneriComponent.vue
+npx @dsabre/generate-vue-cli --dir=src/components --name=HelloWorld --template=templates/GenericComponent.vue
 ```
+
 ## Authors
 
 - [@dsabre](https://github.com/dsabre)
 
-
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-

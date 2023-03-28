@@ -3,25 +3,25 @@
 
 A Vue CLI to generate components instantly.
 
-
 ## Run using npx
 
 ```bash
-  npx generate-vue-cli --dir=src/components --name=HelloWorld
+  npx @dsabre/generate-vue-cli --dir=src/components --name=HelloWorld
 ```
+
 ## Usage/Examples
 
 Create a src/components/HelloWorld.vue component:
 
 ```bash
-npx generate-vue-cli --dir=src/components --name=HelloWorld
+npx @dsabre/generate-vue-cli --dir=src/components --name=HelloWorld
 ```
 
 ### using templates
 
 You can specify a custom template of your own (use `[[COMPONENT_NAME]]` token to print the new component name, it will be replaced when the component is created):
 
-```
+```vue
 // templates/GeneriComponent.vue
 
 <script setup>
@@ -36,7 +36,7 @@ const msg = '[[COMPONENT_NAME]] component';
 then run:
 
 ```bash
-npx generate-vue-cli --dir=src/components --name=HelloWorld --template=templates/GeneriComponent.vue
+npx @dsabre/generate-vue-cli --dir=src/components --name=HelloWorld --template=templates/GeneriComponent.vue
 ```
 ## Authors
 

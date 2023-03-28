@@ -7,7 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "npx tsc --watch",
-    "build": "npx tsc && npx esbuild dist/generate-vue-cli.js --minify --outfile=dist/generate-vue-cli.js --allow-overwrite && echo -n \"#!/usr/bin/env node\\n\"|cat - dist/generate-vue-cli.js > dist/tmp.js && rm -f dist/generate-vue-cli.js && mv dist/tmp.js dist/generate-vue-cli.js"
+    "build": "npx tsc && npx esbuild dist/generate-vue-cli.js --minify --outfile=dist/generate-vue-cli.js --allow-overwrite && echo -n \"#!/usr/bin/env node\\n\"|cat - dist/generate-vue-cli.js > dist/tmp.js && rm -f dist/generate-vue-cli.js && mv dist/tmp.js dist/generate-vue-cli.js",
+    "publish": "npm publish --access public"
   },
   "keywords": [
     "cli",

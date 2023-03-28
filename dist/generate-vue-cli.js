@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-"use strict";const fs=require("fs"),{red,green,bold,yellow}=require("chalk"),getArgs=()=>{const s=process.argv.slice(2),e={dir:"",name:""};return s.forEach(n=>{const t=n.split("="),r=t[0].split("--").join("").trim(),o=t[1].trim();e[r]=o}),e},args=getArgs();let hasErrors=!1;args.dir||(console.log(red(`Directory param not provided (pass it with --dir=[...]).
+"use strict";const fs=require("fs"),{red,green,bold,yellow}=require("chalk"),getArgs=()=>{const s=process.argv.slice(2),e={dir:"",name:""};return s.forEach(r=>{const t=r.split("="),n=t[0].split("--").join("").trim(),o=t[1].trim();e[n]=o}),e},args=getArgs();let hasErrors=!1;args.dir||(console.log(red(`Directory param not provided (pass it with --dir=[...]).
 `)),hasErrors=!0),args.name||(console.log(red(`Component name param not provided (pass it with --name=[...]).
-`)),hasErrors=!0),hasErrors&&process.exit(1),fs.existsSync(args.dir)||fs.mkdirSync(args.dir);const path=`${args.dir}/${args.name}.vue`,getTemplate=()=>args.template?fs.readFileSync(args.template).toString().split("[[COMPONENT_NAME]]").join(args.name):`<script setup>
+`)),hasErrors=!0),hasErrors&&process.exit(1),fs.existsSync(args.dir)||fs.mkdirSync(args.dir,{recursive:!0});const path=`${args.dir}/${args.name}.vue`,getTemplate=()=>args.template?fs.readFileSync(args.template).toString().split("[[COMPONENT_NAME]]").join(args.name):`<script setup>
 const msg = '${args.name} component';
 <\/script>
 

@@ -9,6 +9,26 @@ interface IArgs {
     suffix?: string;
 }
 
+// manage help
+if (process.argv.slice(2).indexOf('--help') > -1 || process.argv.slice(2).indexOf('-h') > -1) {
+    console.log(`Usage: npx @dsabre/generate-vue-cli [flags]
+
+Generate a Vue component.
+
+Flags:
+    --dir        (required)   The directory where the component will be generated.
+    --name       (required)   The name of the component.
+    --prefix     (optional)   Prefix to prepend to component name.
+    --suffix     (optional)   Suffix to append to component name.
+    --template   (optional)   The template path to use.
+
+    -h, --help   Display this help message and exit.
+
+Example:
+    npx @dsabre/generate-vue-cli --dir="src/components" --name="HelloWorld" --prefix="Prefix" --suffix="Suffix"`);
+    process.exit();
+}
+
 const getArgs = () => {
     const args: string[] = process.argv.slice(2);
     const ret: IArgs = {

@@ -5,6 +5,8 @@ interface IArgs {
     dir: string;
     name: string;
     template?: string;
+    prefix?: string;
+    suffix?: string;
 }
 
 const getArgs = () => {
@@ -45,6 +47,8 @@ if (hasErrors) {
 if (!fs.existsSync(args.dir)) {
     fs.mkdirSync(args.dir, {recursive: true});
 }
+
+args.name = `${args.prefix ?? ''}${args.name}${args.suffix ?? ''}`;
 
 const path = `${args.dir}/${args.name}.vue`;
 const getTemplate = () => {

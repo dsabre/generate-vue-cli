@@ -1,6 +1,6 @@
 {
   "name": "@dsabre/generate-vue-cli",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A Vue CLI to generate components instantly",
   "main": "dist/generate-vue-cli.js",
   "bin": "dist/generate-vue-cli.js",
